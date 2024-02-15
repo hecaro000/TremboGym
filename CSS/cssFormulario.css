@@ -1,0 +1,87 @@
+body {
+  background-image: url(../Imagenes/madera-negra.jpg);
+}    
+    
+/* Estilos generales del formulario */
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #e4e1e1;
+  border-radius: 5px;
+  font-family: Arial, sans-serif;
+}
+  
+/* Estilos para las etiquetas */
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+  
+/* Estilos para los campos de entrada */
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+  
+/* Estilos para los botones */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+  
+button:hover {
+  background-color: #45a049;
+}
+  
+/* Estilos para la validación de campos */
+input:required:invalid,
+textarea:required:invalid {
+  border: 1px solid red;
+}
+  
+input:required:valid,
+textarea:required:valid {
+  border: 1px solid #ccc;
+}
+  
+/* Estilos para la clase de error */
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: -5px;
+  margin-bottom: 10px;
+}
+
+footer{
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+}
+
+a :active{
+  color: white;
+}
+
+a:link {
+  color: white;
+}
+
+a:visited {
+  color: white;
+}
+
+a:hover {
+  color: red;
+}

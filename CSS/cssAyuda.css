@@ -1,0 +1,67 @@
+body {
+  background-image: url(../Imagenes/pizarra.jpg);
+}
+
+/* Estilos para el título */
+h2 {
+  text-align: center;
+  font-size: 24px;
+  color: #ffffff;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+h3 {
+  color: white;
+}
+  
+/* Estilos generales para las listas */
+ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+  
+/* Estilos para cada lista específica */
+ul#Nombre li {
+  background-color: #f2f2f2;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+  
+ul#DNI li {
+  background-color: #e6e6e6;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+  
+ul#email li {
+  background-color: #d9d9d9;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+  
+ul#tel li {
+  background-color: #cccccc;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+  
+ul#men li {
+  background-color: #bfbfbf;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+  
+ul#sexo li {
+  background-color: #b3b3b3;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+  
+ul#ob li {
+  background-color: #a6a6a6;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+  

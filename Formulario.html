@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Fromulario TremboGym</title><link rel="shortcut icon" href="Imagenes/logo.png"/>
+  <link rel="stylesheet" href="CSS/cssFormulario.css">
+  <script src="JS/scriptFormulario.js"></script>
+</head>
+<body>
+  <form action="formulario" method="POST" name="formulario" class="formulario">
+    <h1>Introduzca sus datos de contacto</h1>
+    <label for="nombre" id="lN">Nombre*:</label>
+    <input type="text" id="N" name="N" placeholder="Escriba su nombre">
+
+    <label for="DNI" id="ldni">DNI*:</label>
+    <input type="text" id="DNI" name="DNI" placeholder="Ingrese su DNI">
+
+    <label for="email" id="lmail">Correo electrónico*:</label>
+    <input type="email" id="email" name="email" placeholder="Ingrese su dirección decorreo eléctronico">
+
+    <label for="telefono" id="ltelefono">Teléfono*:</label>
+    <input type="tel" id="telefono" name="telefono" placeholder="Introduce tu número de teléfono">
+
+    <br><br>
+
+    <label for="sexo">Sexo:</label>
+    <select id="sexo" name="sexo" onchange="versexo()">
+      <option value="0">Seleccionar</option>
+      <option value="1">Masculino</option>
+      <option value="2">Femenino</option>
+    </select>
+
+    <label for="mensaje">
+      <p id="parra">Información adicional (puede insertar un máximo de 120 caracteres):</p>
+    </label>
+    <textarea id="mensaje" name="mensaje" onkeydown=" return limita(120)" onkeyup="actualizaMensaje(120)" rows="3"
+      cols="30"></textarea>
+
+    <br><br>
+
+    <label for="acepto">Acepto los términos y condiciones:</label>
+    <input type="checkbox" id="acepto" name="acepto" onclick="cond()">
+
+    <br><br>
+
+    <label for="acepto">Acepto las condiciones de privacidad:</label>
+    <input type="radio" id="priv" name="priv" onclick="priv()">
+
+    <br><br>
+
+    <button type="submit" onclick="return valida()" onclick="abrirAyuda()">Enviar</button>
+    <input onclick="deshacer()" type="button" value="Vaciar" name="Desactivar" id="des"/>
+  </form>
+  <br>
+  <footer>
+    <a href="Forma de rellenar el form.html" target="_blank" id="ayuda">Especificaciones del formulario</a>
+  </footer>
+</body>
+</html>
