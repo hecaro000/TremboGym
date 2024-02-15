@@ -1,0 +1,77 @@
+body {
+    background-image: url("../Imagenes/pizarra.jpg");
+    font-family: 'Arial', sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
+
+#tarifas {
+    display: flex;
+    justify-content: space-around;
+    margin: 2em;
+}
+
+.tarifa {
+    border: 1px solid #ccc;
+    padding: 1em;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+    cursor: pointer;
+    max-width: 320px; /* Adjusted maximum width */
+    margin: 0 10px 20px 10px; /* Added margin between boxes */
+}
+
+.tarifa:hover {
+    transform: scale(1.05); /* Slightly smaller scale on hover */
+    z-index: 1;
+}
+
+.descripcion {
+    font-size: 0.9em; /* Slightly larger font size */
+    color: #555;
+    margin-top: 0.5em;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    padding: 10px; /* Padding for better visibility */
+    border-radius: 5px; /* Rounded corners */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.descripcion.active {
+    display: block;
+}
+
+.opcion {
+    border: 1px solid #ccc;
+    padding: 0.5em;
+    margin-top: 1em;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.opcion:hover {
+    transform: scale(1.1);
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
