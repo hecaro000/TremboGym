@@ -45,7 +45,7 @@
 
 /* body{background: black;} */
 body{max-width: 2440px;margin:auto;
-  background: black url(../images/madera-negra.jpg) repeat center center fixed;  
+  background: black url(../Imagenes/madera-negra.jpg) repeat center center fixed;  
   
        background-size:50% auto;
    text-align:center;margin-bottom:0px; overflow-x: hidden;
