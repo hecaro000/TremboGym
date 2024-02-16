@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+/* font-family: 'Source Sans Pro', sans-serif; */
+
+:root {
+  --color1: #f2f2f2;
+  --color2: #6382bf;
+  --color3: #607ea6;
+  --color3-05: rgba(96, 126, 166, 0.5);
+  --color3-1: rgba(96, 126, 166, 1);
+  /*rgba(96,126,166,1)*/
+  --color4: #010440;
+  --color5: #0d0d0d;
+}
+
+::-webkit-scrollbar {
+  width: 1.2vw;
+  height: 17px;
+}
+
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color5);
+  border: 0.2vw solid var(--color3);
+  border-radius: 100px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fff;
+  border: 0.2vw solid #000;
+  border-radius: 50px;
+}
+
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+
+
+
+
+/* body{background: black;} */
+body{max-width: 2440px;margin:auto;
+  background: black url(../images/madera-negra.jpg) repeat center center fixed;  
+  
+       background-size:50% auto;
+   text-align:center;margin-bottom:0px; overflow-x: hidden;
+ scroll-behavior: smooth;}
+   p,h1,h2,h3,h4,h5{color:white;}
+     a{color:#00c7ec; cursor: pointer;} 
+     a:hover{text-decoration:none;color:white;}
+ 
+  
+ 
+ 
+ #cabecera_box{min-width:329px; min-height:350px; box-sizing:border-box;
+   display:flex;flex-flow:column wrap; justify-content: flex-star;align-items: center;
+  }
+ 
+ #nav_box{width:100%; max-height:83px; box-sizing:border-box;position: sticky; top:0;z-index:10000000000000000000;
+   display:flex;flex-flow:row nowrap;  justify-content: flex-start;
+   padding-top:12px;padding-bottom:12px;
+  
+   background-color:black;
+ /* 	background: linear-gradient(to bottom, rgba(117,117,117,1) 0%, rgba(117,117,117,1) 73%, rgba(117,117,117,0.42) 93%, rgba(117,117,117,0) 100%); */
+ }#nav_box h1{z-index:2000;margin:5px auto;font-family:cursive;}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Source Sans Pro', sans-serif;
+  scroll-behavior: smooth;
+}
+
+.tamaño_fotos { width: 900px; height: 200px;}
+
+#all_father {
+  max-width: 1200px;
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  margin: auto;
+
+}
+
+/* Inicio botones */
+		/*botonera hamburguesa y abrir menu*/
+    input[name="hamburguer"]{display:none;}
+    #label-hamburguer{width:50px;height:50px; z-index:1000; position: absolute; left: 7.5px;
+      display: flex;flex-flow: column nowrap;justify-content: space-between;
+      margin-left:5px;	margin-right:20px;
+      cursor: pointer;
+      transition: transform 330ms ease-out;
+      } .hamburline{ height:6px; width:100%;
+      border-radius: 5px;
+        background: white;
+    }.top,.bottom{width:50%;}.top{transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+      transform-origin: right;
+    }.bottom{align-self: flex-end;
+      transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+      transform-origin: left;
+    } #hamburguer-input:checked + label{transform: rotate(-45deg);  transition: transform 330ms ease-in;}#hamburguer-input:checked + label .top{  transform: rotate(-90deg) translateX(3px);
+    } #hamburguer-input:checked + label .bottom{transform: rotate(-90deg) translateX(-3px);
+    }
+    
+    #boton_box{ width:100%; box-sizing:border-box; z-index:100;
+    display:flex;flex-flow:column nowrap;justify-content: flex-start;align-items: flex-start;position:absolute;top:-5px;  
+    padding:5px; padding-top:52px;
+      opacity:0;transition: opacity 0.3s ease-in; 
+      background:black;
+     
+    }
+     
+    
+    /* Animación de entrada y salida de los botones*/
+    
+    
+     #hamburguer-input:checked ~ #boton_box{opacity:1;transition: opacity 0.5s ease-in;}
+    
+    
+    
+    @keyframes scale-in-tl{0%{transform:scale(0);transform-origin:0 0;opacity:1}100%{transform:scale(1);transform-origin:0 0;opacity:1}}
+       
+       
+       #hamburguer-input:checked ~ 	#boton_box	.boton_superior{ animation:scale-in-tl .5s cubic-bezier(.25,.46,.45,.94) both}
+     
+     @keyframes scale-in-tl-reverse{0%{transform:scale(0);transform-origin:0 0;opacity:1}99%{transform:scale(1);transform-origin:0 0;opacity:1}100%{display:none;}}
+     
+     .boton_superior{animation: scale-in-tl-reverse .5s cubic-bezier(.25,.46,.45,.94) reverse both;}
+    
+    
+    
+    
+       /*Estructura del boton y efecto del boton*/
+    
+    
+    .boton_superior{/* height:114px;width:114px; */box-sizing:border-box;position:relative;
+      display:flex;flex-flow:column wrap; justify-content: center;align-items: center;
+     padding:4px;margin:5px;
+     
+      
+      color: white;
+      text-decoration:underline;
+     font-size:20px;
+      letter-spacing:2px;
+      
+      
+      transition:all 0.2s ease-in; 
+    }  
+    
+    .boton_superior a{z-index:100; color:white;}
+    .enlace_ancla_oculto{width:0px;height:0px;position:relative;}
+    
+    a[id="mis_aficiones"]{position:relative;top:-50px;}
+    #rrss_box img{margin-left:3px;margin-bottom: 10px}
+    
+    /* Fin de botonera*/
+
+/* Características */
+
+
+#caracteristicas {
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#caracteristicas_principales {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+#caracteristicas_principales h2 {
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+
+.caracteristica_item {
+  width: 30%;
+  min-height: 312px;
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.caracteristica_item img {
+  display: block;
+  margin: auto;
+  max-height: 150px;
+  max-width: 150px;
+}
+
+
+.caracteristica_item_definicion {
+  position: relative;
+  top: 0px;
+  min-height: 120px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  margin: 5px auto;
+  padding: 0px 15px 20px 10px;
+}
+
+.caracteristica_item_definicion>* {
+  max-width: 100%;
+  margin: 5px auto;
+  text-align: center;
+}
+
+.texto_oculto {
+  display: none;
+}
+
+
+/* Codigo para la cruz y mostrar el texto */
+
+
+.ampliar_caracteristicas {
+  width: 30px;
+  cursor: pointer;
+  display: block;
+  position: absolute;
+  bottom: 0%;
+  right: 0%;
+}
+
+.ampliar_caracteristicas:before, .ampliar_caracteristicas:after {
+  content: '';
+  display: inline-block;
+  height: 20px;
+  width: 4px;
+  background-color: var(--color3);
+  border-radius: 10px;
+  position: relative;
+  transition: 300ms ease-in-out transform;
+}
+
+.ampliar_caracteristicas:before {
+  transform: rotate(-45deg);
+  left: 0px;
+  top: 0px;
+}
+
+.ampliar_caracteristicas:after {
+  transform: rotate(45deg);
+  left: 8px;
+  top: 0px;
+}
+
+.ampliar_caracteristicas.open:before {
+  transform: translateX(6px) rotate(-45deg);
+}
+
+.ampliar_caracteristicas.open:after {
+  transform: translateX(-6px) rotate(45deg);
+}
+
+
+/* Fin de caracteristicas */
+
