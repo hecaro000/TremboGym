@@ -4,7 +4,7 @@ img[alt="www.000webhost.com"]{display:none;}
 ::-webkit-scrollbar-track{background:gray;border:1px solid #000000;border-radius:50px;}
 
 body{max-width: 2440px;margin:auto;
- background: black url(../images/madera-negra.jpg) repeat center center fixed;  
+ background: black url(../Imagenes/madera-negra.jpg) repeat center center fixed;  
  
 			background-size:50% auto;
 	text-align:center;margin-bottom:0px; overflow-x: hidden;
@@ -110,7 +110,7 @@ a[id="aficiones"]{position:relative;top:-50px;}
 
 	padding:10px;
 	
- 	background:  white url(../images/pizarra.jpg)  repeat center top fixed ;
+ 	background:  white url(../Imagenes/pizarra.jpg)  repeat center top fixed ;
 					background-origin:border-box;
 						background-size:contain;}
 #intro_box *{text-align:center;}
