@@ -96,7 +96,7 @@ padding:5px; padding-top:52px;
 .boton_superior a{z-index:100; color:white;}
 .enlace_ancla_oculto{width:0px;height:0px;position:relative;}
 
-a[id="mis_aficiones"]{position:relative;top:-50px;}
+a[id="aficiones"]{position:relative;top:-50px;}
 #rrss_box img{margin-left:3px;margin-bottom: 10px}
 
 /* Fin de botonera*/
