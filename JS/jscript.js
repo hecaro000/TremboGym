@@ -49,3 +49,8 @@ $(document).ready(function(){
     } // End if
   }); 
 });
+
+function toggleDropdown() {
+  var dropdownContent = document.getElementById("myDropdown");
+  dropdownContent.style.display = (dropdownContent.style.display === 'block') ? 'none' : 'block';
+}
