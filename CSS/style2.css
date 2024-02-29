@@ -28,6 +28,27 @@ scroll-behavior: smooth;}
 /* 	background: linear-gradient(to bottom, rgba(117,117,117,1) 0%, rgba(117,117,117,1) 73%, rgba(117,117,117,0.42) 93%, rgba(117,117,117,0) 100%); */
 }#nav_box h1{z-index:2000;margin:5px auto;font-family:cursive;}
 
+/* Estilos para el menú desplegable */
+.dropdown {
+	position: relative;
+	display: inline-block;
+	cursor: pointer; /* Cambia el cursor al hacer clic */
+  }
+
+  .dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #000000;
+	min-width: 160px;
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+	padding: 12px;
+	z-index: 1;
+  }
+
+  .dropdown:hover .dropdown-content {
+	display: block;
+  }
+
 /* Inicio botones */
 		/*botonera hamburguesa y abrir menu*/
 input[name="hamburguer"]{display:none;}
@@ -246,4 +267,3 @@ background-size: contain;
 
 }
 
- 
