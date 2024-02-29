@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Inicio de sesión</title><link rel="shortcut icon" href="Imagenes/logo.png"/>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="CSS/sign.css">
+        <script src="JS/sign.js"></script>
+    </head>
+    <body>
+        <form action="formulario" method="POST" name="formulario" class="formulario">
+            <h1>Inice sesión</h1>
+        
+            <label for="email" id="lmail">Correo electrónico*:</label>
+            <input type="email" id="email" name="email" placeholder="Ingrese su dirección decorreo eléctronico">
+
+            <label for="psw" id="lpsw">Contraseña*:</label>
+            <input type="password" id="psw" name="psw" placeholder="Ingrese su contraseña">
+
+            <br><br>
+        
+            <button type="submit" onclick="return valida()" onclick="abrirAyuda()">Enviar</button>
+            <input onclick="deshacer()" type="button" value="Vaciar" name="Desactivar" id="des"/>
+          </form>
+    </body>
+</html>
