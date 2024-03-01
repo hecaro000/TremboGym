@@ -1,0 +1,12 @@
+# Privilegios para `dani`@`localhost`
+
+GRANT ALL PRIVILEGES ON *.* TO 'dani'@'localhost' WITH GRANT OPTION;
+
+GRANT ALL PRIVILEGES ON `trembogym`.* TO 'dani'@'localhost' WITH GRANT OPTION;
+
+
+# Privilegios para `root`@`localhost`
+
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'localhost' WITH GRANT OPTION;
+
+GRANT PROXY ON ''@'' TO 'root'@'localhost' WITH GRANT OPTION;
