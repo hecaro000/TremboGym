@@ -60,7 +60,7 @@
 			<div class="dropdown" onclick="toggleDropdown()">
 				<img src="Imagenes/perfil.png" alt="perfil" style="height: 60px; width: 60px;"/>
 				<div class="dropdown-content" id="myDropdown">
-			<? if (!isset($_SESSION['usuario'])) { ?>
+			<? if (!isset($_SESSION['usuario_in'])) { ?>
 				  <a href="sign_in.php">Iniciar sesión</a>
 				  <a href="log_in.php">Registrarse</a>
 			<? } else { ?>
