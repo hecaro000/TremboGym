@@ -2,7 +2,7 @@
         <title>Inicio de sesión</title><link rel="shortcut icon" href="Imagenes/logo.png"/>
         <meta charset="utf-8">
         <link rel="stylesheet" href="CSS/sign.css">
-        <!--script src="JS/sign.js"></script-->
+        <script src="JS/sign.js"></script>
     </head>
     <body>
         <form action="sign.php" method="POST" name="formulario" class="formulario">

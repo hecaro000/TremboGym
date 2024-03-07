@@ -32,7 +32,6 @@
 
             <label for="psw" id="lpsw">Contraseña*:</label>
             <input type="password" id="psw" name="psw" placeholder="Ingrese su contraseña">
-            <input type="password" id="pswd" name="pswd" placeholder="Ingrese la misma contraseña" required>
         
             <label for="telefono" id="ltelefono">Teléfono*:</label>
             <input type="tel" id="telefono" name="telefono" placeholder="Introduce tu número de teléfono">
