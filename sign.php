@@ -36,18 +36,5 @@ $password = $_POST["psw"];
         $_SESSION["mensaje_error"] = "No existe un usuario con este correo o la contraseña no coincide";
         header("Location: sign_in.php");
     }
-// Verificar si el usuario ya existe en la base de datos 
-/*    $sql_verificar = mysqli_prepare($conn, "SELECT Correo FROM cliente WHERE Correo= ?");
-    $sql_verificar->bind_param("s", $email);
-    $sql_verificar->execute();
-
-    if (!mysqli_stmt_affected_rows($sql_verificar)) {
-        $_SESSION["mensaje_error"] = "No existe un usuario con este Correo. Resgistrese primero";
-        header("Location: sign_in.php");
-        exit();
-    } else {
-        $_SESSION["mensaje_ok"] = "Inicio de sesión exitoso. ¡Bienvenido de nuevo!";
-            header("Location: index.php");
-    }*/
     mysqli_close($conn);
 
