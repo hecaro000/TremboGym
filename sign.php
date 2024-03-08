@@ -26,13 +26,9 @@ $password = $_POST["psw"];
     if (($usuario = mysqli_fetch_array($resultado)) && password_verify($password, $usuario["Contraseña"])) {
         $_SESSION["mensaje_ok"] = "Has iniciado sesión como " . $usuario["Nombre"];
         $_SESSION["usuario_in"] = $usuario["Cliente_Id"];
-        error_log("Todo va bien");
         header("Location: index.php");
         exit();
-    } else {         error_log($password);
-        error_log($usuario["Contraseña"]);
-        error_log(password_verify($password, $usuario["Contraseña"])); 
-        error_log("TE");
+    } else {       
         $_SESSION["mensaje_error"] = "No existe un usuario con este correo o la contraseña no coincide";
         header("Location: sign_in.php");
     }
