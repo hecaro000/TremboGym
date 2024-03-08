@@ -1,15 +1,14 @@
 	<head>
-		<title>Registrate</title><link rel="shortcut icon" href="Imagenes/logo.png"/>
+		<title>Editar Perfil</title><link rel="shortcut icon" href="Imagenes/logo.png"/>
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="CSS/incss.css">
 		<script src="JS/injs.js"></script>
 	</head>
 	<body>
 		<form action="editar_perfil_php.php" method="POST" name="formulario" class="formulario">
-			<h1>Registrate</h1>
+			<h1>Editar Perfil</h1>
 			<?php
 			require "initdb.php";
-			
 			$titulo = "Editar Perfil";
 			?>
 
