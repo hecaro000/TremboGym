@@ -47,9 +47,9 @@ error_reporting(E_ALL);
 			
 					<a class="boton_superior" href="Servicios.php" target="_self" onClick="cerrarBotonera()">Servicios</a>
 			
-					<a class="boton_superior" href="Tarifas.html" target="_blank" onClick="cerrarBotonera()">Tarifas</a>
+					<a class="boton_superior" href="Tarifas.php" target="_blank" onClick="cerrarBotonera()">Tarifas</a>
 			
-					<a class="boton_superior" href="Formulario.html" target="_blank" onClick="cerrarBotonera()">Formulario</a>
+					<a class="boton_superior" href="Formulario.php" target="_blank" onClick="cerrarBotonera()">Formulario</a>
 					<?php require "initdb.php"; ?>
  					 <? if (isset($_SESSION["mensaje_ok"])) { ?>
 	  				<div class="mensaje_ok">
@@ -89,7 +89,7 @@ error_reporting(E_ALL);
 		<form action="Funciones_Servicios.php" method="POST" name="formulario" class="formulario">
 		<div id="caracteristicas_principales">
 			<h2>Servicios de TremboGym</h2>
-								<?php $Servicios = getServicios();
+					<?php $Servicios = getServicios();
 					$rows = [];
 					while($row = mysqli_fetch_assoc($Servicios)) {
 						$rows[] = $row;
