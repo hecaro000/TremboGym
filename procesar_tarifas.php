@@ -2,33 +2,47 @@
 require "initdb.php";
 
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+session_start();
+if (!isset($_SESSION["usuario_in"])) {
+    
+    header("Location: login.php");
+    exit();
+}
 
-    if (isset($_POST["tipo"]) && isset($_POST["categoria"])) {
+$tipo = $_POST["tipo"];
+$cat = $_POST["categoria"];
+$user = $_SESSION["usuario_in"];
+$precio = 0;
 
-        $tipo = $_POST["tipo"];
-        $categoria = $_POST["categoria"];
+if ($tipo == "Mensual" && $cat == "Estandar") { 
+    $precio = 30;
+} elseif ($tipo == "Mensual" && $cat == "Premium") {
+    $precio = 40;
+} elseif ($tipo == "Trimestral" && $cat == "Estandar") {
+    $precio = 90;
+} elseif ($tipo == "Trimestral" && $cat == "Premium") {
+    $precio = 100;
+} elseif ($tipo == "Semestral" && $cat == "Estandar") {
+    $precio = 180;
+} elseif ($tipo == "Semestral" && $cat == "Premium") {
+    $precio = 190;
+} elseif ($tipo == "Anual" && $cat == "Estandar") {
+    $precio = 360;
+} elseif ($tipo == "Anual" && $cat == "Premium") {
+    $precio = 370;
+}
 
+$sql_insertar = mysqli_prepare($conn, "INSERT INTO tarifas (Tipo, Precio, Categoria, Client_ID) VALUES (?, ?, ?, ?)");
+mysqli_stmt_bind_param($sql_insertar, "siss", $tipo, $precio, $cat, $user); 
+mysqli_stmt_execute($sql_insertar);
 
-        if ($conn->connect_error) {
-            die("Error de conexión: " . $conn->connect_error);
-        }
-
-        $sql = "INSERT INTO tarifas (Tipo, Categoria) VALUES ('$tipo', '$categoria')";
-
-
-        if ($conn->query($sql) === TRUE) {
-            echo "Datos insertados correctamente en la base de datos.";
-        } else {
-            echo "Error al insertar datos: " . $conn->error;
-        }
-
-
-        $conn->close();
-    } else {
-        echo "Error: Por favor, completa todos los campos del formulario.";
-    }
-} else {
-    echo "Error: Esta página solo puede ser accedida mediante un formulario POST.";
+if (mysqli_stmt_affected_rows($sql_insertar) > 0) {
+    $_SESSION["mensaje_ok"] = "Se han agregado correctamente las tarifas";
+    header("Location: index.php");
+    exit();
+} else { 
+    $_SESSION["mensaje_error"] = "Ha habido un error al agregar las tarifas";
+    header("Location: tarifas.php");
+    exit();
 }
 ?>
